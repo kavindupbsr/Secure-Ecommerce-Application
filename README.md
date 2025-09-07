@@ -125,7 +125,7 @@ A comprehensive e-commerce web application built with the MERN stack, featuring 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/secure-ecommerce-app.git
+   git clone https://github.com/kavindupbsr/Secure-Ecommerce-Application
    cd secure-ecommerce-app
    ```
 
