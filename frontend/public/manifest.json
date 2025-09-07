@@ -1,0 +1,30 @@
+{
+  "short_name": "SecureShop",
+  "name": "Secure E-commerce Platform",
+  "description": "A secure e-commerce platform with Auth0 authentication and OWASP Top 10 protection",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4f46e5",
+  "background_color": "#667eea",
+  "categories": ["shopping", "security"],
+  "lang": "en",
+  "dir": "ltr",
+  "orientation": "portrait-primary"
+}

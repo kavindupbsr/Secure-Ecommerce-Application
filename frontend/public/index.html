@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.auth0.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://*.auth0.com https://localhost:* wss://localhost:*; frame-src 'self' https://*.auth0.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Secure e-commerce platform with Auth0 authentication and OWASP Top 10 protection" />
+    <meta name="keywords" content="secure, ecommerce, auth0, owasp, security, online shopping" />
+    <meta name="author" content="Secure E-commerce Team" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Secure E-commerce Platform" />
+    <meta property="og:description" content="A secure e-commerce platform with enterprise-level security" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://localhost:3000" />
+    
+    <!-- Apple Meta Tags -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="SecureShop">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Preconnect to Auth0 domain for performance -->
+    <link rel="preconnect" href="https://%REACT_APP_AUTH0_DOMAIN%" crossorigin>
+    
+    <!-- Title -->
+    <title>Secure E-commerce Platform</title>
+    
+    <!-- Inline critical CSS for security -->
+    <style>
+      /* Critical loading styles */
+      .loading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #4f46e5;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Hide content until React loads */
+      #root:empty::before {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        z-index: 9999;
+      }
+      
+      #root:empty::after {
+        content: 'Loading Secure Platform...';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 1.2rem;
+        z-index: 10000;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f3f4f6;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        text-align: center;
+        color: #374151;
+      ">
+        <div>
+          <h1>🛡️ Secure E-commerce</h1>
+          <p>
+            JavaScript is required to run this secure application.<br>
+            Please enable JavaScript in your browser to continue.
+          </p>
+          <p style="margin-top: 2rem; font-size: 0.9rem; color: #6b7280;">
+            This application uses modern security features that require JavaScript.
+          </p>
+        </div>
+      </div>
+    </noscript>
+    
+    <!-- Root element for React app -->
+    <div id="root"></div>
+    
+    <!-- Error boundary fallback -->
+    <script>
+      window.addEventListener('error', function(e) {
+        console.error('Application error:', e);
+        // In production, you might want to send this to an error reporting service
+      });
+      
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e);
+        // In production, you might want to send this to an error reporting service
+      });
+      
+      // Basic security checks
+      if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+        location.replace('https:' + location.href.substring(location.protocol.length));
+      }
+    </script>
+    
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+      
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+      
+      To begin development, run `npm start`.
+      To create a production bundle, use `npm run build`.
+    -->
+  </body>
+</html>

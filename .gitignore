@@ -1,0 +1,292 @@
+# 🔒 SECURITY - Environment Variables and Secrets
+# CRITICAL: Never commit actual credentials to version control
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+!**/.env.example
+
+# 📦 Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# 🏗️ Build Outputs
+build/
+dist/
+out/
+.next/
+.nuxt/
+.output/
+
+# 🔐 SSL Certificates and Keys
+*.key
+*.crt
+*.pem
+*.p12
+*.pfx
+ssl/
+certificates/
+backend/certificates/
+frontend/ssl/
+
+# 📝 Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npmrc
+
+# 🏃‍♂️ Runtime Data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# 🧪 Coverage Directory (Testing)
+coverage/
+*.lcov
+.nyc_output
+
+# 🔧 IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# 🖥️ Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# 📱 React Specific
+.eslintcache
+
+# 🎯 Next.js Specific
+.next/
+out/
+
+# 🔄 Temporary Folders
+tmp/
+temp/
+.tmp/
+.temp/
+
+# 🗄️ Database Files (if using local DB)
+*.db
+*.sqlite
+*.sqlite3
+data/
+db/
+
+# 🎨 Sass
+.sass-cache/
+*.css.map
+
+# 📊 Webpack
+.webpack/
+
+# 🧹 Cache Directories
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+# 📦 Package Manager Caches
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# 🚀 Deployment Files
+.vercel
+.netlify
+
+# 🔍 Diagnostic Reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# 🧪 Optional npm cache directory
+.npm
+
+# 🔧 Optional eslint cache
+.eslintcache
+
+# 🎯 Optional stylelint cache
+.stylelintcache
+
+# 📦 Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# 🏃‍♂️ Optional REPL history
+.node_repl_history
+
+# 📊 Output of 'npm pack'
+*.tgz
+
+# 🔄 Yarn Integrity file
+.yarn-integrity
+
+# 🎯 dotenv environment variables file
+.env.test
+
+# 🚀 Parcel-bundler cache
+.cache
+.parcel-cache
+
+# 🧪 Jest
+jest_reports/
+
+# ⚡ Vite
+.vite/
+
+# 🔧 Turborepo
+.turbo/
+
+# 🎨 Storybook build outputs
+.out
+.storybook-out
+
+# 📱 Expo
+.expo/
+.expo-shared/
+
+# 🎯 Local Netlify folder
+.netlify
+
+# 🔒 Auth0 Local Config (if using Auth0 CLI)
+.auth0/
+
+# 🗂️ MacOS
+.AppleDouble
+.LSOverride
+
+# 📁 Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 🐧 Linux
+*~
+
+# 🎮 Game Save Files
+*.sav
+*.save
+
+# 📋 Clipboard Files
+clipboard/
+
+# 🔍 Search Index Files
+.vscode/search.cache
+
+# 🎯 TypeScript
+*.tsbuildinfo
+
+# 🔧 ESLint
+.eslintrc.local.js
+.eslintrc.local.json
+
+# 🎨 Prettier
+.prettierrc.local.js
+.prettierrc.local.json
+
+# 📊 Bundle Analysis
+bundle-analyzer-report.html
+.bundlewatch.json
+
+# 🚀 PM2 Process Manager
+ecosystem.config.js
+.pm2/
+
+# 🔄 Backup Files
+*.backup
+*.bak
+*.orig
+
+# 📝 Documentation Build
+docs/build/
+doc/build/
+
+# 🧪 Test Results
+test-results/
+cypress/videos/
+cypress/screenshots/
+
+# 🎯 Specific to this project
+uploads/
+public/uploads/
+static/uploads/
+
+# 🔐 Security Scan Results
+security-scan-results.json
+vulnerability-report.html
+
+# 📊 Performance Reports
+performance-report.html
+lighthouse-report.html
+
+# 🔍 Debug Files
+debug.log
+error.log
+access.log
+
+# 🎯 Environment Specific Files
+config/local.json
+config/production.json
+config/staging.json
+
+# 📱 Mobile Development
+ios/
+android/
+*.mobileprovision
+
+# 🎮 Unity (if applicable)
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+
+# ⚡ Serverless
+.serverless/
+serverless.yml.bak
+
+# 🎯 Firebase
+.firebase/
+firebase-debug.log
+.firebaserc.local
+
+# 🔄 GitHub Actions (if using secrets)
+.github/workflows/*.local.yml
+
+# 📊 Monitoring and Analytics
+newrelic_agent.log
+.nyc_output/
